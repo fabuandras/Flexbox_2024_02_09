@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 10px;
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+}
+
+nav, div, header, article, aside, footer {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+div {
+    background-color: aliceblue;
+}
+
+
+/* menü kialakítása flexbox-szal */
+
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+nav ul li {
+    padding: 10px;
+    background-color: brown;
+}
+
+nav ul li {
+    flex: 0 1 200px;
+}
+
+nav ul li:hover a {
+    color: orange;
+}
+
+
+/* Oldalalakítás (áááááááááá)*/ 
+
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header, nav, footer {
+    width: 100%;
+}
+
+article {
+    width: 70%;
+}
+
+aside {
+    width: 30%;
+}
+
+
+/* article-ben lévő dobozok */
+
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+article>div {
+    flex: 1 1 25%;
+}
+
+article>div:nth-child(1) {
+    flex: 0 0 100%;
+    background-color: white;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        flex: 0 1 100%;
+    }
+
+    article {
+        width: 100%;
+    }
+    
+    aside {
+        width: 100%;
+    }
+
+    article>div {
+        flex: 0 1 50%;
+    }
+}
